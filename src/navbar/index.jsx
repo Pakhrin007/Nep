@@ -1,19 +1,51 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import logo from '../assets/Images/logo.png';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    let scrollTimeout;
+    const handleScroll = () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        if (window.scrollY > 50) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+      }, 50); // 50ms debounce
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      clearTimeout(scrollTimeout);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className="sticky w-full z-50 top-0 start-0 backdrop-blur-md bg-white/30 border-b border-white/30 shadow-sm">
-
-      <div className="max-w-[1280px] flex flex-wrap items-center justify-between mx-auto px-4 py-2">
-        <Link to='/' className="flex items-center space-x-3 rtl:space-x-reverse">
+    <nav
+      className={`sticky z-50 top-0 left-0 right-0 mx-auto backdrop-blur-md  bg-white/30  ${
+        scrolled
+          ? 'bg-white shadow-md rounded-b-lg py-1 w-[1300px]'
+          : 'w-full backdrop-blur-md bg-white/30 border-b border-white/30 shadow-sm py-3'
+      } transition-[width,background-color,padding,border-radius,box-shadow] duration-600 ease-in-out`}
+    >
+      <div
+        className={`mx-auto px-4 ${
+          scrolled ? 'max-w-[1000px]' : 'max-w-[1280px]'
+        } flex flex-wrap items-center justify-between transition-[max-width] duration-600 ease-in-out`}
+      >
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={logo} className="h-8" alt="Logo" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap text-black ">
-            Nephara
-          </span>
+          {!scrolled && (
+            <span className="self-center text-2xl font-semibold whitespace-nowrap text-black font-title">
+              Nephara
+            </span>
+          )}
         </Link>
 
         {/* Desktop Buttons */}
@@ -22,7 +54,7 @@ const Navbar = () => {
             Log in
           </button>
           <button className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-[16px] px-4 py-2 font-title">
-            Get started
+            Sign up
           </button>
         </div>
 
@@ -52,38 +84,40 @@ const Navbar = () => {
 
         {/* Navigation Links + Mobile Buttons */}
         <div
-          className={`w-full md:flex md:w-auto md:order-1 md:bg-transparent md:border-none ${menuOpen ? 'block' : 'hidden'}`}
+          className={`w-full md:flex md:w-auto md:order-1 md:bg-transparent md:border-none ${
+            menuOpen ? 'block' : 'hidden'
+          }`}
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 mt-4 border md:border-none md:bg-transparent border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0  justify-end items-end mr-0">
+          <ul className="flex flex-col p-4 mt-4 border md:border-none md:bg-transparent border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 justify-end items-end mr-0">
             <li className="relative group">
               <a href="#" className="block py-2 px-3 text-black font-title">
                 Features
               </a>
-              <div className="absolute left-0  w-[300px] bg-white border border-gray-200 rounded-lg shadow-lg hidden group-hover:block z-50">
+              <div className="absolute left-0 w-[300px] bg-white border border-gray-200 rounded-lg shadow-lg hidden group-hover:block z-50">
                 <ul className="py-2 text-sm text-gray-700 flex flex-col">
                   <li>
-                    <Link to='/ai-assistant' className="block px-4 py-2 hover:bg-gray-100 font-title">
+                    <Link to="/ai-assistant" className="block px-4 py-2 hover:bg-gray-100 font-title">
                       Ai-Assistant
                     </Link>
                   </li>
                   <li>
-                    <Link to='/collaboration' className="block px-4 py-2 hover:bg-gray-100 font-title">
+                    <Link to="/collaboration" className="block px-4 py-2 hover:bg-gray-100 font-title">
                       Collaboration
                     </Link>
                   </li>
                   <li>
-                    <Link to='/documents' className="block px-4 py-2 hover:bg-gray-100 font-title">
+                    <Link to="/documents" className="block px-4 py-2 hover:bg-gray-100 font-title">
                       Documentation
                     </Link>
                   </li>
                   <li>
-                    <Link to='/human-resource' className="block px-4 py-2 hover:bg-gray-100 font-title">
+                    <Link to="/human-resource" className="block px-4 py-2 hover:bg-gray-100 font-title">
                       Human Resource
                     </Link>
                   </li>
                   <li>
-                    <Link to='/project-management' className="block px-4 py-2 hover:bg-gray-100 font-title">
+                    <Link to="/project-management" className="block px-4 py-2 hover:bg-gray-100 font-title">
                       Project Management
                     </Link>
                   </li>
@@ -91,12 +125,12 @@ const Navbar = () => {
               </div>
             </li>
             <li>
-              <Link to='/pricing' className="block py-2 px-3 text-black font-title">
+              <Link to="/pricing" className="block py-2 px-3 text-black font-title">
                 Pricing
               </Link>
             </li>
             <li>
-              <Link to='/blog' className="block py-2 px-3 text-black font-title">
+              <Link to="/blog" className="block py-2 px-3 text-black font-title">
                 Blog
               </Link>
             </li>
@@ -108,7 +142,7 @@ const Navbar = () => {
               Log in
             </button>
             <button className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-[16px] px-4 py-2 font-title">
-              Get started
+              Sign up
             </button>
           </div>
         </div>
