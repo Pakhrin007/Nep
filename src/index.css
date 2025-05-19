@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+.font-title {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes loop-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-20%); /* Adjusted to match the 5x duplication */
+  }
+}
+
+.animate-loop-scroll {
+  animation: loop-scroll 15s linear infinite; /* Adjusted duration for smoothness */
+  will-change: transform;
+}
