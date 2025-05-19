@@ -1,4 +1,4 @@
-import workflow from '../../../../../../assets/images/AI/workflow.jpeg';
+import workflow from '../../../../../../assets/Images/AI/workflow.jpeg';
 
 const Workflow = () => {
   return (

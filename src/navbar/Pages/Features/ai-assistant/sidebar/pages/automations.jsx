@@ -1,4 +1,4 @@
-import automation from '../../../../../../assets/images/AI/automation.jpeg';
+import automation from '../../../../../../assets/Images/AI/automation.jpeg';
 
 const Automations = () => {
   return (
