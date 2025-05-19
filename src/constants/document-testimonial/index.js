@@ -1,4 +1,4 @@
-import Ai from "../../assets/Images/Ai.jpg"
+import Ai from "../../assets/Images/ai.jpg"
     const documentTestimonials = [
     {
       id: 1,
