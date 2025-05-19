@@ -7,7 +7,7 @@ import Testimonial from '../../../../ui/testimonials';
 import CTASection from '../../../../ui/cta';
 import aiAssistantTestimonials from '../../../../constants/ai-assistant-testinomial/index';
 import aiAssistant from "../../../../assets/Images/ai-assistant.png";
-import Ai from "../../../../assets/Images/Ai.jpg";
+import Ai from "../../../../assets/Images/ai.jpg";
 import Ai2 from "../../../../assets/video/Ai.mp4";
 import Svg1 from "../../../../assets/Images/svg/svg1";
 
