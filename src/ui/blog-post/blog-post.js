@@ -1,4 +1,4 @@
-import Admin from "../../assets/Images/Admin.jpg"
+import Admin from "../../assets/Images/admin.jpg"
 const BlogPost = [
     {
         id: 1,
