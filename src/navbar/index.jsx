@@ -31,13 +31,13 @@ const Navbar = () => {
   className={`sticky z-50 top-0 left-0 right-0 mx-auto backdrop-blur-md bg-white/30 ${
     scrolled
       ? 'bg-white shadow-md rounded-b-lg py-1 w-[1300px]'
-      : 'w-full backdrop-blur-md bg-white/30 border-b border-white/30 shadow-sm py-3'
-  } transition-all duration-700 ease-in-out`}
+      : 'w-full backdrop-blur-md bg-white/30  border-white/30 shadow-sm py-3'
+  } transition-all duration-500 ease-in-out`}
 >
   <div
     className={`w-full px-4 md:px-8 ${
       scrolled ? 'max-w-[1300px] h-[60px]' : 'max-w-[1280px]'
-    } mx-auto flex items-center justify-between transition-all duration-700 ease-in-out relative`}
+    } mx-auto flex items-center justify-between transition-all duration-500 ease-in-out relative`}
   >
 
         {/* Logo Left */}
