@@ -4,7 +4,7 @@ import CTASection from "../../../ui/cta";
 import Companies from "../../../ui/companies-section/index"
 import PricingDetails from "./pricing-details";
 import PricingComparison from "./pricing-comparison";
-
+import FAQSection from "../../../ui/faq";
 const Pricing = () => {
   const [isAnnual, setIsAnnual] = useState(true);
   const [selectedAddOns, setSelectedAddOns] = useState([]);
@@ -58,9 +58,9 @@ const Pricing = () => {
           <span className="bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-sm">20% off</span>
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {/* Free Trial */}
-          <div className="border rounded-2xl p-8 w-[360px] shadow-md bg-white border-gray-200 flex flex-col gap-y-2 ">
+          <div className="border rounded-2xl p-8 w-[400px] shadow-md bg-white border-gray-200 flex flex-col gap-y-2 ">
             <h2 className=" mb-2 font-heading py-2 px-4 bg-gray-100 rounded-full w-fit">Free Trial</h2>
             <p className="text-2xl font-bold mb-4 text-gray-800">$0</p>
             <p className="text-gray-600 mb-2">14 days, no credit card required</p>
@@ -74,7 +74,7 @@ const Pricing = () => {
           </div>
 
           {/* Standard */}
-          <div className="border rounded-2xl p-8 w-[360px] shadow-md bg-white border-gray-200 flex flex-col gap-y-2 ">
+          <div className="border rounded-2xl p-8 w-[400px] shadow-md bg-white border-gray-200 flex flex-col gap-y-2 ">
             <h2 className=" mb-2 font-heading py-2 px-4 bg-gray-100 rounded-full w-fit">Standard</h2>
             <p className="text-2xl font-bold text-gray-800">${calculateTotal()}<span className="text-base font-normal"> / user / {isAnnual ? "year" : "month"}</span></p>
             <div className="w-full mt-4 space-y-[10px]">
@@ -101,7 +101,7 @@ const Pricing = () => {
 
           {/* Pro */}
           {/* ---------------most popular : to right corner --------------- */}
-          <div className="border-2 border-blue-500 rounded-2xl p-8 w-[360px] shadow-md bg-white flex flex-col gap-y-2 relative">
+          <div className="border-2 border-blue-500 rounded-2xl p-8 w-[400px] shadow-md bg-white flex flex-col gap-y-2 relative">
             <div className="text-sm text-white bg-blue-500 p-2 rounded-2xl mb-2 ml-0 mt-0 absolute -top-0 -right-1">Most Popular</div>
             <h2 className=" mb-2 font-heading py-2 px-4 bg-gray-100 rounded-full w-fit">Pro</h2>
             <p className="text-2xl font-bold text-gray-800">${isAnnual ? 192 : 20}<span className="text-base font-normal"> / user / {isAnnual ? "year" : "month"}</span></p>
@@ -122,11 +122,13 @@ const Pricing = () => {
           Pay-for-what-you-use pricing
         </h1>
         <PricingComparison/>
+        <FAQSection/>
 
         {/* Add pricing comparison table */}
        
 
         <CTASection />
+        
       </div>
     </>
   );

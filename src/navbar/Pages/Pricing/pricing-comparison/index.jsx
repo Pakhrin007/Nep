@@ -12,7 +12,7 @@ export default function PricingComparison() {
             </tr>
           </thead>
           <tbody className="text-[16px] font-body" >
-            <tr className="border-b border-gray-200">
+            <tr className="border-b border-gray-200 bg-gray-100">
               <td className="py-4 px-6 text-left font-medium text-gray-800">Feature Pricing</td>
               <td className="py-4 px-6 text-left text-gray-800">All included</td>
               <td className="py-4 px-6 text-left text-gray-800">Modular</td>
@@ -24,7 +24,7 @@ export default function PricingComparison() {
               <td className="py-4 px-6 text-left text-amber-600">$5/user</td>
               <td className="py-4 px-6 text-left text-green-600">✓</td>
             </tr>
-            <tr className="border-b border-gray-200">
+            <tr className="border-b border-gray-200 bg-gray-100">
               <td className="py-4 px-6 text-left font-medium text-gray-800">Team Chat</td>
               <td className="py-4 px-6 text-left text-green-600">✓</td>
               <td className="py-4 px-6 text-left text-amber-600">$5/user</td>
@@ -36,7 +36,7 @@ export default function PricingComparison() {
               <td className="py-4 px-6 text-left text-amber-600">$5/user</td>
               <td className="py-4 px-6 text-left text-green-600">✓</td>
             </tr>
-            <tr className="border-b border-gray-200">
+            <tr className="border-b border-gray-200 bg-gray-100">
               <td className="py-4 px-6 text-left font-medium text-gray-800">Calendar</td>
               <td className="py-4 px-6 text-left text-green-600">✓</td>
               <td className="py-4 px-6 text-left text-green-600">✓</td>
@@ -56,7 +56,7 @@ export default function PricingComparison() {
                 <div className="text-xs text-gray-500">($0.20/GB extra)</div>
               </td>
             </tr>
-            <tr className="border-b border-gray-200">
+            <tr className="border-b border-gray-200 bg-gray-100">
               <td className="py-4 px-6 text-left font-medium text-gray-800">AI Chat</td>
               <td className="py-4 px-6 text-left text-gray-800">20 credits</td>
               <td className="py-4 px-6 text-left text-gray-800">$9.99 for 500 credits</td>
@@ -68,7 +68,7 @@ export default function PricingComparison() {
               <td className="py-4 px-6 text-left text-green-600">✓</td>
               <td className="py-4 px-6 text-left text-green-600">✓</td>
             </tr>
-            <tr className="border-b border-gray-200">
+            <tr className="border-b border-gray-200 bg-gray-100">
               <td className="py-4 px-6 text-left font-medium text-gray-800">Advanced Admin Controls</td>
               <td className="py-4 px-6 text-left text-gray-400">✗</td>
               <td className="py-4 px-6 text-left text-gray-800">Basic</td>
@@ -80,7 +80,7 @@ export default function PricingComparison() {
               <td className="py-4 px-6 text-left text-gray-400">✗</td>
               <td className="py-4 px-6 text-left text-green-600">✓</td>
             </tr>
-            <tr className="border-b border-gray-200">
+            <tr className="border-b border-gray-200 bg-gray-100">
               <td className="py-4 px-6 text-left font-medium text-gray-800">Early AI Access</td>
               <td className="py-4 px-6 text-left text-gray-400">✗</td>
               <td className="py-4 px-6 text-left text-gray-400">✗</td>
