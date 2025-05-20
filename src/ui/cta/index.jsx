@@ -9,13 +9,13 @@ const CTASection = () => {
       </div>
 
       {/* Heading */}
-      <h1 className="sm:text-5xl font-semibold max-w-2xl font-body">
+      <h1 className="sm:text-5xl font-semibold max-w-2xl font-heading">
         We live in our inboxes. <br />
         Let’s make email enjoyable.
       </h1>
 
       {/* Subheading */}
-      <p className="text-gray-300 text-lg max-w-xl font-body">
+        <p className="text-gray-300 text-lg max-w-xl font-body">
         Try us out for free, invite a few people to get a feel, and upgrade when you’re ready.
       </p>
 
@@ -31,14 +31,14 @@ const CTASection = () => {
       <hr className="w-full border-1 border-gray-700" />
 
       {/* Footer */}
-      <footer className="w-full pt-12 px-6 text-left text-sm">
+      <footer className="w-full pt-12 px-6 text-left text-sm font-body">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Left Section */}
           <div className="col-span-2">
             <div className="flex items-center gap-4">
               <img src={logo} alt="Footer logo" className="w-10 h-10" />
               <div>
-                <p className="text-gray-400 font-semibold">Latest post</p>
+                <p className="text-gray-400 font-semibold font-body">Latest post</p>
                 <p className="text-white">Outlook vs Gmail for Business:</p>
                 <p className="text-gray-300">Which is better?</p>
               </div>
@@ -48,7 +48,7 @@ const CTASection = () => {
           {/* Product */}
           <div>
             <h4 className="font-semibold text-white mb-2">Product</h4>
-            <ul className="space-y-1 text-gray-400">
+            <ul className="space-y-1 text-gray-400 font-body">
               <li>Book a demo</li>
               <li>Features</li>
               <li>Pricing</li>
@@ -61,7 +61,7 @@ const CTASection = () => {
           </div>
 
           {/* Solutions */}
-          <div>
+          <div className="font-body">
             <h4 className="font-semibold text-white mb-2">Solutions</h4>
             <ul className="space-y-1 text-gray-400">
               <li>Accounting</li>
@@ -71,7 +71,7 @@ const CTASection = () => {
           </div>
 
           {/* Company */}
-          <div>
+          <div className="font-body">
             <h4 className="font-semibold text-white mb-2">Company</h4>
             <ul className="space-y-1 text-gray-400">
               <li>Blog</li>
