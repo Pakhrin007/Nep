@@ -20,7 +20,7 @@ const CTASection = () => {
       </p>
 
       {/* Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div className="flex flex-col sm:flex-row gap-4 mb-10">
         <button className="bg-white text-black px-6 py-3 rounded-lg font-semibold font-body">
           Try for free
         </button>
@@ -28,9 +28,10 @@ const CTASection = () => {
           Book a demo
         </button>
       </div>
+      <hr className="w-full border-1 border-gray-700" />
 
       {/* Footer */}
-      <footer className="w-full mt-20 pt-12 px-6 text-left text-sm">
+      <footer className="w-full pt-12 px-6 text-left text-sm">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Left Section */}
           <div className="col-span-2">

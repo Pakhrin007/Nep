@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
 .font-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+.font-heading {
+  font-family: 'Tinos', serif;
 }
 
 .font-body {

@@ -32,12 +32,12 @@ const LeftTab = ({ pageSelected, setPageSelected }) => {
               : "bg-gray-50 hover:bg-gray-100 hover:shadow-sm hover:scale-102"
           }`}
         >
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 font-heading">
             <div className="text-2xl">{tab.icon}</div>
-            <h4 className="text-lg font-sans font-medium text-gray-800 leading-relaxed">
+              <h4 className="text-lg  font-semibold text-gray-800 leading-relaxed font-heading">
               {tab.title}
             </h4>
-            <p className="text-gray-500 text-sm font-sans leading-relaxed">
+            <p className="text-gray-500 text-sm font-body leading-relaxed">
               {tab.desc}
             </p>
           </div>

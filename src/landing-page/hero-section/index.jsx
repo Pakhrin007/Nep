@@ -1,11 +1,11 @@
 
 const HeroSection = ({title,description,video}) => {
   return (
-    <div className="flex flex-col items-center gap-y-6 px-4 py-10">
+    <div className="flex flex-col items-center gap-y-6 px-4 py-10 font-heading">
       
       {/* Content Section */}
       <div className="flex flex-col gap-y-6 w-full max-w-[900px] text-center">
-        <h1 className="text-3xl sm:text-[28px] md:text-[36px] font-semibold  leading-tight">
+        <h1 className="text-3xl sm:text-[28px] md:text-[45px] font-medium  leading-tight">
           {title}
         </h1>
         <p className="text-gray-500 text-base sm:text-lg md:text-xl ">
