@@ -55,7 +55,8 @@ const Navbar = () => {
         {/* Centered Nav Links */}
         <div className="hidden md:flex flex-grow justify-center space-x-8 items-center">
           <div className="relative group">
-            <span className="text-black font-title cursor-pointer">Features</span>
+            {/* -----------hover effect----------------- */}
+                <span className="px-4 py-[8px] text-black font-title cursor-pointer transition-all duration-300 ease-in-out hover:bg-gray-200 rounded-lg">Features</span>
             <div className="absolute left-0 mt-2 w-[300px] bg-white border border-gray-200 rounded-lg shadow-lg hidden group-hover:block z-50">
               <ul className="py-2 text-sm text-gray-700 flex flex-col">
                 <li>
@@ -86,8 +87,8 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
-          <Link to="/pricing" className="text-black font-title">Pricing</Link>
-          <Link to="/blog" className="text-black font-title">Blog</Link>
+          <Link to="/pricing" className="px-4 py-1.5   text-black font-title cursor-pointer transition-all duration-300 ease-in-out hover:bg-gray-200 rounded-lg">Pricing</Link>
+          <Link to="/blog" className="px-4 py-1.5 text-black font-title cursor-pointer transition-all duration-300 ease-in-out hover:bg-gray-200 rounded-lg">Blog</Link>
         </div>
 
         {/* Right Side Login/Signup */}
