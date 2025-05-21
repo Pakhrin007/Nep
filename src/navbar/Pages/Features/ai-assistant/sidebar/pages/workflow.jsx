@@ -2,14 +2,18 @@ import workflow from '../../../../../../assets/Images/AI/workflow.jpeg';
 
 const Workflow = () => {
   return (
-    <div className="p-6 bg-white rounded-lg shadow w-full h-full">
-      <h2 className="text-xl font-semibold mb-4">Workflow</h2>
-      <p className="mb-4">Customize shortcuts, layouts, and templated replies to match your unique workflow.</p>
+    <div className="p-6 bg-white rounded-lg shadow-md w-full h-full transition-all duration-300">
+      <h2 className="text-xl font-sans font-medium text-gray-800 mb-4 font-heading">
+        Workflow
+      </h2>
+      <p className="mb-4 text-gray-600 text-base font-body leading-relaxed">
+        Customize shortcuts, layouts, and templated replies to match your unique workflow.
+      </p>
       <div className="mt-4">
         <img
           src={workflow}
           alt="Workflow Customization"
-          className="rounded-lg w-full h-full"
+          className="rounded-lg w-full h-64 object-cover"
         />
       </div>
     </div>

@@ -18,26 +18,29 @@ const LeftTab = ({ pageSelected, setPageSelected }) => {
       desc: "Shortcuts, layouts, templated replies, and more, are all customizable to your unique way of working.",
       icon: "⚙️",
     },
-
   ];
 
   return (
-    <div className="flex flex-col gap-4 max-w-[580px] w-full bg-white  rounded-lg p-2 border border-gray-200">
+    <div className="flex flex-col gap-4 max-w-full md:max-w-[400px] w-full bg-gray-50 rounded-lg p-2 shadow-sm">
       {tabs.map((tab) => (
         <div
           key={tab.key}
           onClick={() => setPageSelected(tab.key)}
-          className={`cursor-pointer p-4 rounded-lg transition-all text-[24px] font-title ${
+          className={`cursor-pointer p-4 rounded-lg transition-all duration-300 ${
             pageSelected === tab.key
-              ? "bg-gray-100"
-              : "hover:bg-gray-50 border-transparent"
+              ? "bg-white shadow-md scale-100"
+              : "bg-gray-50 hover:bg-gray-100 hover:shadow-sm hover:scale-102"
           }`}
         >
-          <div className="flex gap-4 mb-2 flex-col">
-            <div className="text-xl">{tab.icon}</div>
-            <h4 className=" text-gray-800 font-title">{tab.title}</h4>
+          <div className="flex flex-col gap-2 font-heading">
+            <div className="text-2xl">{tab.icon}</div>
+              <h4 className="text-lg  font-semibold text-gray-800 leading-relaxed font-heading">
+              {tab.title}
+            </h4>
+            <p className="text-gray-500 text-sm font-body leading-relaxed">
+              {tab.desc}
+            </p>
           </div>
-          <p className="text-gray-500 text-sm font-title">{tab.desc}</p>
         </div>
       ))}
     </div>
