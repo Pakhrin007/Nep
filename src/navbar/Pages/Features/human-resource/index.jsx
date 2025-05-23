@@ -4,9 +4,9 @@ import CTASection from "../../../../ui/cta/index";
 import Testimonial from "../../../../ui/testimonials/index";
 import Sidebar from "./sidebar/index";
 import testimonials from "../../../../constants/ai-assistant-testinomial/index";
-import fulldashoard from "../../../../assets/video/ai.mp4";
+import fulldashoard from "../../../../assets/video/calender.mp4";
 import aiassistant from "../../../../assets/Images/ai-assistant.png";
-    import Svg1 from "../../../../assets/Images/svg/svg1";
+import Svg1 from "../../../../assets/Images/svg/svg1";
 import CompaniesSection from "../../../../ui/companies-section";
 const HumanResource = () => {
   return (
