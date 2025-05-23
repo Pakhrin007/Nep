@@ -1,85 +1,35 @@
-import image from '../../assets/Images/admin.jpg'
-import blog from '../../assets/Images/blog.jpeg'
-
+import download from "../../assets/Images/post.jpeg";
+import blog from "../../assets/Images/blog.jpeg"
 const blogData = {
-  featured:[ {
-    title: "How to Record A Podcast Remotely | 4 Methods to Try",
-    author: "Stephen Robles",
-    role: "Video & Podcast Creator",
-    tag: "Podcast recording",
-    date: "October 11, 2024",
-    readTime: "6 min",
-    description: "Learn how to record a podcast remotely with our full step-by-step guide. We'll show you 4 top ways to record a long-distance podcast with remote guests!",
-    image: image
-  },
-  {
-    title: "some title",
-    author: "Stephen Robles",
-    role: "Video & Podcast Creator",
-    tag: "Podcast recording",
-    date: "October 11, 2024",
-    readTime: "6 min",
-    description: "Learn how to record a podcast remotely with our full step-by-step guide. We'll show you 4 top ways to record a long-distance podcast with remote guests!",
-    image: image
-  },
-  {
-    title: "some title",
-    author: "Stephen Robles",
-    role: "Video & Podcast Creator",
-    tag: "Podcast recording",
-    date: "October 11, 2024",
-    readTime: "6 min",
-    description: "Learn how to record a podcast remotely with our full step-by-step guide. We'll show you 4 top ways to record a long-distance podcast with remote guests!",
-    image: image
-  },
-
-],
-  
-  trending: [
+  featured: [
     {
-      title: "How to Use iPhone as Webcam on Mac & Windows | Step-by-Step",
-      tag: "Studio equipment",
-      date: "Jun 26, 2024",
-      readTime: "8 min",
-      image: blog
+      title: "Optimizing nurse triage call centers with virtual triage: Benefits for organizations, nurses, and patients",
+      author: "Infermedica Team",
+      tag: "Healthcare AI",
+      date: "May 20, 2025",
+      readTime: "4 min",
+      description: "AI-powered virtual triage in nurse triage call centers improves efficiency, nurse retention, and care continuity compared to Schmitt-Thompson RBTPs.",
+      image: download,
     },
     {
-      title: "How to Record a Video Podcast (Remotely) in 5 Steps",
-      tag: "Video podcast",
-      date: "Mar 21, 2024",
-      readTime: "14 min",
-      image: blog
+      title: "Moving towards clinically validated Neuro-Symbolic AI",
+      author: "Infermedica Team",
+      tag: "Healthcare Innovation",
+      date: "May 22, 2025",
+      readTime: "5 min",
+      description: "Infermedica's vision for Gen AI in healthcare. Combining LLMs with clinically validated knowledge to create a conversational, trusted healthcare companion.",
+      image: "https://a.storyblok.com/f/120667/3120x2200/87e3771e2c/neuro-symbolic-ai.png/m/756x0/filters:format(webp)",
     },
     {
-      title: "How to Improve Zoom Video Quality (Full Video & Audio Guide)",
-      tag: "Recording software",
-      date: "Mar 5, 2024",
-      readTime: "10 min",
-      image: blog
+      title: "Launching Conversational Triage: Combining LLMs with Bayesian Models",
+      author: "Infermedica Team",
+      tag: "AI Healthcare",
+      date: "May 23, 2025",
+      readTime: "6 min",
+      description: "Discover conversational triage, an enhanced healthcare AI product with improved patient understanding, language capabilities, and empathy.",
+      image: download,
     },
-    {
-      title: "How to Use iPhone as Webcam on Mac & Windows | Step-by-Step",
-      tag: "Studio equipment",
-      date: "Jun 26, 2024",
-      readTime: "8 min",
-      image: blog
-    },
-    {
-      title: "How to Record a Video Podcast (Remotely) in 5 Steps",
-      tag: "Video podcast",
-      date: "Mar 21, 2024",
-      readTime: "14 min",
-      image: blog
-    },
-    {
-      title: "How to Improve Zoom Video Quality (Full Video & Audio Guide)",
-      tag: "Recording software",
-      date: "Mar 5, 2024",
-      readTime: "10 min",
-      image: blog
-    },
-    
-  ]
+  ],
 };
 
 export default blogData;
