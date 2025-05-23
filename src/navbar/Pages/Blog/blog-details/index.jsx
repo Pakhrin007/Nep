@@ -1,58 +1,37 @@
-import { useParams } from "react-router-dom";
-import Navbar from "../../../../navbar/index";
-import { BlogPost, BlogPost2, company } from "../../../../ui/blog-post/blog-post";
+import React from 'react';
+import blogData from '../../../../ui/blog-post/blog-post.js';
 
-const BlogDetail = () => {
-    const { id } = useParams();
-    const blog = BlogPost.find(post => post.id === parseInt(id));
-    const blog2 = BlogPost2.find(post => post.id === parseInt(id));
-    const companyBlog = company.find(post => post.id === parseInt(id));
+const BlogDetailPage = () => {
+  const { featured } = blogData;
 
-    if (!blog && !blog2 && !companyBlog) {
-        return (
-            <>
-                <Navbar />
-                <div className="max-w-[800px] mx-auto px-4 py-8">
-                    <h2 className="text-2xl font-bold text-red-500">Blog not found</h2>
-                </div>
-            </>
-        );
-    }
-
-    return (
-        <>
-            <Navbar />
-            <div className="max-w-[800px] mx-auto px-4 py-8">
-                {blog && (
-                    <>
-                        <img
-                            src={blog.image}
-                            alt={blog.title}
-                            className="w-full h-64 object-cover rounded-xl mb-6"
-                        />
-                        <h1 className="text-3xl font-bold mb-4">{blog.title}</h1>
-                        <p className="text-gray-700 text-lg">{blog.detail}</p>
-                    </>
-                )}
-                {blog2 && (
-                    <>
-                        <h1 className="text-3xl font-bold mb-4">{blog2.title}</h1>
-                        <p className="text-gray-700 text-lg">{blog2.detail}</p>
-                    </>
-                )}
-                {companyBlog && (
-                    <>
-                        <h1 className="text-3xl font-bold mb-4">{companyBlog.name}</h1>
-                        <p className="text-gray-700 text-lg">{companyBlog.description}</p>
-                        <p className="text-gray-700 text-lg">{companyBlog.foundedYear}</p>
-                        <p className="text-gray-700 text-lg">{companyBlog.headquarters}</p>
-                        <p className="text-gray-700 text-lg">{companyBlog.industry}</p>
-                        <p className="text-gray-700 text-lg">{companyBlog.employeeCount}</p>
-                    </>
-                )}
-            </div>
-        </>
-    );
+  return (
+    <div className="max-w-4xl mx-auto p-6">
+     
+      <img
+        src={`/images/${featured.image}`}
+        alt={featured.title}
+        className="w-full h-96 object-cover rounded-xl mb-6"
+      />
+      <h1 className="text-4xl font-bold mb-4">{featured.title}</h1>
+      <p className="text-gray-600 text-lg mb-4">{featured.description}</p>
+      <div className="text-sm text-gray-500 mb-6">
+        By {featured.author} • {featured.tag} • {featured.date} • {featured.readTime}
+      </div>
+      <div className="prose max-w-none">
+        <p>
+          Recording a podcast remotely can be easy and effective if you use the right tools.
+          In this guide, we’ll explore four reliable methods for remote podcasting,
+          including Zoom, Riverside.fm, and more.
+        </p>
+        <ul>
+          <li>Use a dedicated podcasting platform (like Riverside)</li>
+          <li>Try video conferencing tools (Zoom, Skype)</li>
+          <li>Record audio separately and sync in post</li>
+          <li>Hire a remote producer or use automation tools</li>
+        </ul>
+      </div>
+    </div>
+  );
 };
 
-export default BlogDetail;
+export default BlogDetailPage;
